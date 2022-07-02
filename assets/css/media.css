@@ -1,0 +1,65 @@
+/* ============ media запросы ============ */
+
+/* если экран меньше 767px то переопредели размер шрифта для всей страницы */
+@media only screen and (max-width: 767px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  :root {
+    --min-fs: 16;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .header {
+    background: transparent;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav, .container {
+    padding: 0rem 0.75rem;
+  }
+  .logo {
+    display: none;
+  }
+  .nav-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav .social-list {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+  .link-list__item:not(:first-child), .social-list__item:not(:first-child) {
+    margin-left: 3rem;
+  }
+
+  .social-list__item {
+    padding: 0 0.5rem;
+    border-top: 1px solid rgb(113, 116, 255);
+    border-bottom: 1px solid rgb(174, 79, 237);
+    box-shadow: 0px 0px 5px 1px rgba(230, 162, 254, 0.3);
+  }
+
+  .caution__title {
+      font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .flex-block img {
+    display: none;
+  }
+  .flex-block {
+    text-align: center;
+    justify-content: center;
+  }
+  .roadmap__card-list {
+    justify-content: center;
+    align-items: center;
+  }
+  .roadmap__card-list .scratch-block {
+    display: none;
+  }
+}
+

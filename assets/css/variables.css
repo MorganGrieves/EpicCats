@@ -1,0 +1,13 @@
+/* =============== Переменные =============== */
+
+:root {
+  /* viewport */
+  --min-vw: 320;  /* resolution by horizontal iphone 5 */
+  --max-vw: 3840; /* resolution by horizontal 4k display */
+
+  /* font-size */
+  --min-fs: 11;
+  --max-fs: 26;
+  --fs: calc(var(--min-fs) * 1px + (var(--max-fs) - var(--min-fs)) * 
+    (100vw - var(--min-vw) * 1px) / (var(--max-vw) - var(--min-vw)));
+}

@@ -1,0 +1,36 @@
+/* Сброс некоторых стилей по умолчанию */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, main, section, header, nav, footer, aside, article, div, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+}
