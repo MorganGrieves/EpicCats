@@ -105,22 +105,24 @@ html {
 }
 
 .title h1 {
-  background: -webkit-linear-gradient(250deg, #8a4dec 0%, #3b60d8 25%, #a835d2 50% , #8a4dec 75% ),
-  -webkit-linear-gradient(70deg, #8a4dec 0%, #3b60d8 25%, #a835d2 50% , #8a4dec 75% );
+  background: -webkit-linear-gradient(250deg, #01B726 0%, #45DF64 25%, #02D92D 50% , #1C5928 75%, #02A622 100% ),
+-webkit-linear-gradient(70deg, #01B726 0%, #45DF64 25%, #02D92D 50% , #1C5928 75%, #02A622 100% );
+  animation: shine 15s ease infinite;
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  animation: shine 15s linear infinite;
 }
 
 @keyframes shine {
-    from {
-        background-position: 0 center;
+    0% {
+        background-position: 0% 50%;
     }
-    to {
-        background-position: 200% center;
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -139,7 +141,7 @@ html {
 /* =================== SECTION - caution ==================== */
 
 .caution {
-  background: center top / cover no-repeat url(../images/jpg/img_6.jpg);
+  background: center top / cover no-repeat url(../images/jpg/img_3.jpg);
 
   width: 100%;
   height: calc(100px + 12vw);
@@ -172,9 +174,15 @@ html {
 .caution__title {
   margin: 0;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #ff2d53;
-  animation: effect 2s ease-in infinite;
+  background: -webkit-linear-gradient(250deg, #8a4dec 0%, #3b60d8 25%, #a835d2 50% , #8a4dec 75% ),
+  -webkit-linear-gradient(70deg, #8a4dec 0%, #3b60d8 25%, #a835d2 50% , #8a4dec 75% );
+  animation: shine 15s linear infinite;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .caution__button {
@@ -419,8 +427,8 @@ html {
   justify-content: flex-start;
 }
 
-.footer-menu, .footer-social {
-  max-width: 140px;
+.footer-menu, .footer-social, .footer-lang {
+  max-width: 160px;
   width: 100%;
 }
 
@@ -439,8 +447,6 @@ html {
   margin-left: 4em;
 }
 
-
-
 .footer-social__list {
   display: flex;
   justify-content: space-between;
@@ -457,4 +463,22 @@ html {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.footer-social__list__item a {
+    line-height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.footer-lang {
+  margin-left: 4em;
+}
+
+.footer-lang__list__item {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
