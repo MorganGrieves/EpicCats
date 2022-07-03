@@ -5,8 +5,7 @@ const translations = {
     "about-menu-item":           "About",
     "roadmap-menu-item":         "Roadmap",
     "team-menu-item":            "Team",
-    "welcome-main":              "EPIC CATS WELCOME <br/><span>YOU</span>",
-    "description-main":          "Dota 2 NFT Cats is a rich collection of  NFTs — unique digital collectibles living on the Ethereum blockchain. ",
+    "description-main":          "Dota 2 NFT Cats is a rich collection of  NFTs — unique <br> digital collectibles living on the Polygon. ",
     "caution-section-title":     "Caution! Cats are deadly charming!",
     "roadmap-title":             "<span>&#9664;</span>Roadmap",
     "roadmap-first-step-title":  "First steps",
@@ -19,14 +18,14 @@ const translations = {
     "roadmap-fourth-step":       "Listing of new NFTs on Opensea. Interaction with media personalities in the field of NFT and Dota2.",
     "our-team-title":            "Our team",
     "menu-footer":               "Menu",
-    "social-title":              "Socials"
+    "social-title":              "Socials",
+    "lang-footer":               "Language",
   },
   "ru": {
     "about-menu-item":           "О нас",
     "roadmap-menu-item":         "Цели",
     "team-menu-item":            "Команда",
-    "welcome-main":              "ДОТА КОТИКИ РАДЫ <br/><span>ВАМ</span>",
-    "description-main":          "Dota 2 NFT Cats — это богатая коллекция NFT  — уникальных цифровых предметов коллекционирования, живущих на блокчейне Ethereum.",
+    "description-main":          "Dota 2 NFT Cats — это богатая коллекция NFT  — уникальных <br> цифровых предметов коллекционирования, <br> живущих на блокчейне Polygon.",
     "caution-section-title":     "Внимание! Котики смертельно очаровательны!",
     "roadmap-title":             "<span>&#9664;</span>Наши цели",
     "roadmap-first-step-title":  "Первые шаги",
@@ -39,7 +38,8 @@ const translations = {
     "roadmap-fourth-step":       "Листинг новых NFT на Opensea. Взаимодействие с медийными личностями в сфере NFT и Dota2.",
     "our-team-title":            "Наша команда",
     "menu-footer":               "Меню",
-    "social-title":              "Сети"
+    "social-title":              "Сети",
+    "lang-footer":               "Язык",
   },
 };
 
@@ -54,3 +54,17 @@ function translateElement(element) {
   const translation = translations[window.locale][key];
   element.innerHTML = translation;
 }
+
+document.getElementById("ru-list-link").addEventListener("click", () => {
+  window.locale = 'ru';
+  document
+    .querySelectorAll("[data-lang]")
+    .forEach(translateElement);
+});
+
+document.getElementById("en-list-link").addEventListener("click", () => {
+  window.locale = 'en';
+  document
+    .querySelectorAll("[data-lang]")
+    .forEach(translateElement);
+});
